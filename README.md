@@ -1,0 +1,1 @@
+Esta es la api utilizada en mi porpio proyecto [S-Shortcut]("https://sshortcut-api.herokuapp.com/") la hice utilizando expressjs con una base de datos mongodb (mongoose) y utlizando JWT para la autenticacion.
