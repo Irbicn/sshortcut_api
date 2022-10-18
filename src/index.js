@@ -32,6 +32,7 @@ app.use(express.json());
 
 const port = process.env.PORT || 5500;
 
+app.get("/");
 app.post("/acount/register", register);
 app.post("/acount/access", access);
 app.get("/acount/verify", verify);
