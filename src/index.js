@@ -26,7 +26,7 @@ app.use(securityMw);
 app.use(DBConnMw);
 app.use(express.json());
 
-const {port = 5500} = process.env;
+const port = process.env.PORT || 5500;
 
 
 
