@@ -3,7 +3,6 @@ const { responses } = require("../utils");
 
 module.exports = async (req,res,next) => {
   const { hey } = req.headers;
-  console.log(req);
   if (!hey)return responses["401"](res);
   try{
     jwt.verify(

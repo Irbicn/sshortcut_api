@@ -20,7 +20,7 @@ app.use(helmet());
 app.use(
   cors({
     origin: process.env.APPURL,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "content-type, HEY, ELTOKEN",
   })
 );
