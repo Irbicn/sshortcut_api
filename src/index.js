@@ -19,7 +19,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: "https://sshortcut.herokuapp.com/",
+    origin: process.env.APPURL,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "content-type, HEY, ELTOKEN",
   })
