@@ -16,19 +16,21 @@ const url_short = require("./API/url_short");
 require("dotenv").config();
 const app = express();
 
-
 app.use(helmet());
-app.use(cors({"origin":"http://localhost:3000",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",allowedHeaders:"content-type, HEY, ELTOKEN"}));
-app.use(express.urlencoded({extended:false}))
+app.use(
+  cors({
+    origin: "https://sshortcut.herokuapp.com/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "content-type, HEY, ELTOKEN",
+  })
+);
+app.use(express.urlencoded({ extended: false }));
 app.use(errorMw);
 app.use(securityMw);
 app.use(DBConnMw);
 app.use(express.json());
 
 const port = process.env.PORT || 5500;
-
-
 
 app.post("/acount/register", register);
 app.post("/acount/access", access);
